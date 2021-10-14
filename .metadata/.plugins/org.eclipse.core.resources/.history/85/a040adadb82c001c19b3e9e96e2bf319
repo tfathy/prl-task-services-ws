@@ -1,0 +1,88 @@
+package org.dhaman.prl.entity;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.dhaman.prl.entity.lookup.WhoColumns;
+
+public class Task implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4274051704511232529L;
+	
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int Id;
+	
+	@ManyToOne()
+	@JoinColumn(name="tst_id")
+	private TaskType taskType;
+	
+	@ManyToOne()
+	@JoinColumn(name="cpy_id")
+	private CounterParty counterparty;
+	
+	@ManyToOne()
+	@JoinColumn(name="mbr_id")
+	private Member member;
+	
+	@Column(name="code")
+	private String code;
+	
+	@Column(name="subject")
+	private String subject;
+	
+	@Column(name="SCHEDULE_DATE")
+	private Date scheduleDate;
+	
+	@Column(name="START_DATE")
+	private Date startDate;
+	
+	@Column(name="POSTPONE_DATE")
+	private Date postponeDate;
+	
+	@Column(name="CANCEL_DATE")
+	private Date cancelDate;
+	
+	@Column(name="RESUME_DATE")
+	private Date resumeDate;
+	
+	@Column(name="RESOLVE_DATE")
+	private Date resolveDate;
+	
+	@Column(name="CLOSE_DATE")
+	private Date closeDate;
+	
+	@Column(name="CLOSE_RESULT")
+	private String closeResult;
+	
+	@Column(name="SATISFACTION_RATE")
+	private Integer satisfictionRate;
+	
+	@Column(name="CLOSE_NOTES")
+	private String closeNotes;
+	
+	@Embedded
+	private WhoColumns whoColumns;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

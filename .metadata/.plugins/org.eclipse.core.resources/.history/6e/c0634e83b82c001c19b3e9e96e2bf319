@@ -1,0 +1,24 @@
+package org.dhaman.prl.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="PRL_COUNTERPARTY")
+public class CounterParty implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8047145664096002263L;
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int Id;
+	
+}

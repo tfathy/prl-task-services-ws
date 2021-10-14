@@ -1,0 +1,7 @@
+package org.dhaman.prl.entity;
+
+import java.io.Serializable;
+
+public class Member implements Serializable{
+
+}

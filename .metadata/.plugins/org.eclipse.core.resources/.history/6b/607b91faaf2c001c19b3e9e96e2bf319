@@ -1,0 +1,19 @@
+package org.dhaman.prl.entity;
+
+import java.io.Serializable;
+
+@Entity()
+@Table(name="PRL_MEMBER")
+public class Member implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5193568712329335949L;
+	
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int Id;
+	
+}

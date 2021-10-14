@@ -1,0 +1,15 @@
+package org.dhaman.prl.entity.lookup;
+
+import java.io.Serializable;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class WhoColumns implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8570695234829605438L;
+
+}

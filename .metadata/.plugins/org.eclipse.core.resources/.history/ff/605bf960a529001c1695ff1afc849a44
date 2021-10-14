@@ -1,0 +1,5 @@
+spring.application.name=dhaman_crm_discovery_service
+server.port=9090
+eureka.client.service-url.defaultZone=http://localhost:9090/eureka
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false

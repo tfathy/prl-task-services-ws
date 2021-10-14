@@ -1,0 +1,18 @@
+package org.dhaman.prl.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PRL_TASK_TYPE")
+public class TaskType implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5791377394771870786L;
+	
+
+}
